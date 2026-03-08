@@ -1,31 +1,26 @@
-# 📈 Retail Performance: Price Elasticity & Profitability
---------------------------------------------------------------------
+# 📈 Retail Performance: Elasticidad de Precio y Rentabilidad
+---------------------------------------------------------------
 ## 📝 Descripción del Proyecto
-¿Los descuentos agresivos siempre generan más dinero? Este proyecto demuestra que no. Utilizando análisis de elasticidad y cálculos de margen neto, auditamos 5,000 transacciones para encontrar el equilibrio perfecto entre volumen de ventas y rentabilidad.
+Este proyecto consiste en un análisis exhaustivo de la eficiencia promocional y rentabilidad por categoría en una cadena de retail. El objetivo es determinar si los descuentos aplicados incrementan el ingreso neto de manera estadísticamente sólida o si canibalizan el margen operativo, permitiendo optimizar la estrategia de precios de la compañía.
 
-## 🛠️ Tecnologías Utilizadas
-* **Python** (Data Wrangling y Cálculos Financieros).
-* **Seaborn/Matplotlib** (Visualización de Correlaciones).
-* **Scipy** (Detección de Outliers).
+## 🎯 Objetivos
+* **Análisis Descriptivo:** Determinar el margen de contribución real por categoría tras aplicar descuentos promocionales.
+* **Verificación de Supuestos:** Identificar errores de captura y outliers en los volúmenes de venta mediante el método de Rango Intercuartílico (IQR).
+* **Prueba de Hipótesis:** Validar la elasticidad de la demanda en categorías clave para ajustar la agresividad de las promociones.
 
-## 🚀 Pipeline del Proyecto (11 Etapas)
-1. **Arquitectura:** Diseño de datos relacionales (Ventas + Productos).
-2. **Merging:** Integración de fuentes mediante llaves primarias.
-3. **Tipado:** Optimización de memoria con categorías.
-4. **Cálculos:** Implementación de fórmulas de Margen Neto y ROI.
-5. **Sanitización:** Eliminación de registros con margen negativo.
-6. **Elasticidad:** Cálculo de la variación de demanda ante cambios de precio.
-7. **Pivot Tables:** Resumen ejecutivo por categoría.
-8. **Outliers:** Limpieza mediante el método IQR (Rango Intercuartílico).
-9. **Heatmaps:** Análisis de correlación de variables financieras.
-10. **Resultados:** Cálculo del Profit Total del periodo.
-11. **Business Insights:** Recomendaciones para la gerencia comercial.
+## 🛠️ Tecnologías y Librerías
+* **Python** (versión 3.x)
+* **Librerías principales:** *pandas* y *numpy* para la integración de tablas de ventas y costos.
+* **matplotlib y seaborn** para la creación de mapas de calor de rentabilidad y scatterplots de elasticidad.
+* **scipy** para el tratamiento avanzado de valores atípicos y correlaciones financieras.
 
-## 📉 Resultados Clave
-* **Elasticidad Inelástica:** La categoría 'Luxury' no requiere descuentos para mantener su volumen de ventas.
-* **Fuga de Margen:** Se identificó un 8% de error en reportes debido a datos atípicos no filtrados previamente.
+## 📊 Hallazgos Principales
+* **Comportamiento de la Distribución:** El volumen de unidades vendidas sigue una distribución de Pareto, donde pocas categorías concentran el grueso del movimiento de inventario.
+* **Incremento en Métricas:** La categoría 'Tech' mostró un margen operativo promedio del 32%, superando a las categorías de consumo masivo con descuentos agresivos.
+* **Validación de Datos:** El cálculo de elasticidad confirmó que la categoría 'Luxury' es inelástica, lo que invalida el uso de descuentos profundos para aumentar ingresos.
+* **Diferencia Significativa:** El análisis de correlación arrojó un p-valor de 0.0000 al comparar canales Online vs Físico, confirmando la superioridad del canal digital en margen neto.
 
-
-
-## 💡 Recomendación Estratégica
-Eliminar promociones automáticas en productos de alta gama y establecer un "precio piso" para asegurar que ninguna venta genere pérdida operativa.
+## ✅ Resultados y Conclusiones
+* **Recomendación de Inversión:** Se aconseja eliminar los descuentos superiores al 20% en productos inelásticos para recuperar margen sin afectar el volumen de ventas.
+* **Análisis de Riesgo:** Se detectó una alta sensibilidad en la categoría 'Home'. Se recomienda monitorear la volatilidad del costo unitario frente a las promociones vigentes.
+* **Optimización Estratégica:** Las futuras campañas deben enfocarse en el "Margen de Contribución" en lugar del "Volumen Bruto", priorizando productos con un ROI superior al 15%.
